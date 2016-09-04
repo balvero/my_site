@@ -1,0 +1,7 @@
+<h1>Index</h1>
+<% @posts.each do |post| %>
+  <h2><%= link_to "#{post.title}", post_path(post) %></h2>
+    <div class="meta">Posted: <%= time_ago_in_words(post.created_at) %> </div>
+    <p><%= truncate(post.content, escape: false, length: 100 ) %></p>
+
+<% end %>
