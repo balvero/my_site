@@ -4,7 +4,7 @@
     <div class="meta center">Posted: <%= @post.created_at.strftime("%A, %b, %d") %> </div>
     <div class="post-spacer"></div>
     <div class="post-content">
-      <%= @post.content %>
+      <%= markdown @post.content %>
     </div>
     <div class="body-nav">
       <%= link_to  'Edit', edit_post_path(@post), class: 'button'  %>

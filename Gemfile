@@ -27,6 +27,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'pygments.rb', '~> 0.6.3'
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
