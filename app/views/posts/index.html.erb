@@ -1,5 +1,5 @@
 <div id="post-index" class="container">
-  <div class="post-entry">
+  <div class="post-entry section">
     <% @posts.each do |post| %>
         <div class="post">
           <h2 class="title"><%= link_to "#{post.title}", post_path(post) %></h2>
