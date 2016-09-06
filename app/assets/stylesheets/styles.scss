@@ -1,6 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ovo', serif;
+}
+
+body, p, div {
+  font-family: 'Muli', sans-serif;
+}
+
+
 header {
   padding-top: 1em;
 }
+
+#branding  {
+  color: #000;
+  font-weight: 300;
+
+  img {
+    margin-bottom: -21px;
+  }
+}
+
 
 a {
   text-decoration: none;
@@ -32,13 +51,23 @@ a {
   margin-bottom: 0; }
 .navbar-link {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: .2rem;
   margin-right: 35px;
   text-decoration: none;
   line-height: 6.5rem;
-  color: #222; }
+  color: #222; 
+
+
+}
+
+.navbar-link:hover {
+  color: #828282;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+
 .navbar-link.active {
   color: #33C3F0; }
 .has-docked-nav .navbar {
@@ -56,8 +85,110 @@ a {
   padding-top: 2em;
 }
 
+#post-index .post {
+  text-align: center;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 1em;
+}
+
+#post-index .post:last-child {
+  border-bottom: none;
+}
+
+.post-entry {
+  max-width: 720px;
+  margin: auto;
+
+  .title {
+    margin-bottom: 0.1em;
+    
+    a {
+      color: #333;
+    }
+  }
+}
+
+.error-list {
+  padding: 0;
+  margin: 0;
+}
+
+.error-list li {
+  list-style: none;
+  color: #B00100;
+  font-weight: 500;
+}
+
+.body-nav {
+  margin: 2em 0;
+  text-align: center;
+}
+
+#footer {
+  padding: 5rem 0 10rem;
+  background-color: #fafafa;
+}
+
+.button-round {
+  border-radius: 100px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
 //Utils
 
 .center {
   text-align: center;
 }
+
+.bg-grey {
+  background-color: #fafafa;
+}
+
+
+.section-description {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Smaller than 550 */
+@media (max-width: 449px) {
+  .section {
+    padding: 2rem 0;
+  }
+}
+
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+
+
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
