@@ -77,10 +77,6 @@ a {
   left: 0; }
 .has-docked-nav .navbar-spacer {
   display: block; }
-/* Re-overiding the width 100% declaration to match size of % based container */
-.has-docked-nav .navbar > .container {
-  width: 80%; }
-
 
 .section-heading {
   border-bottom: 3px solid #e6e6e6;
