@@ -52,8 +52,7 @@ a {
   margin-bottom: 0; }
 .navbar-link {
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
   letter-spacing: .2rem;
   margin-right: 35px;
   text-decoration: none;
@@ -220,6 +219,15 @@ textarea {
 .previous_page:hover, .next_page:hover {
   color: #fff;
   opacity:0.8;
+}
+
+
+// Projects
+
+.button-project {
+  background-color: #1abc9c;
+  border-color: #1abc9c !important;
+  color: #fff !important;
 }
 
 //Utils

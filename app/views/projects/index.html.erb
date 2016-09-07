@@ -1,0 +1,18 @@
+<div id="post-index" class="container">
+  <div class="post-entry section">
+    <% @projects.each do |project| %>
+        <div class="post">
+          <h2 class="title"><%= link_to "#{project.title}", project_path(project) %></h2>
+          <div class="post-summary">
+            <%= truncate(markdown(project.description), escape: false, length: 150 ) %>
+          </div>
+        </div>
+
+    <% end %>
+
+    <div class="pagination center">
+      <%= will_paginate @posts %>
+    </div>
+
+  </div>
+</div>

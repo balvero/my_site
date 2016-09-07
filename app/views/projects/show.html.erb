@@ -1,0 +1,19 @@
+<div  class="container">
+  <section class="section">
+    <div class="post-entry">
+      <h2 class="title center"><%= @project.title %></h2>
+      <div class="post-spacer"></div>
+      <div class="post-content">
+        <%= markdown @project.description %>
+      </div>
+      <div class="center">
+        <a href="<%= @project.link%>" class="button button-project" target="_blank">View <%= @project.title %></a>
+      </div>
+      <div class="body-nav">
+        <%= link_to  'Edit', edit_project_path(@project), class: 'button'  %>
+        <%= link_to  'Delete', project_path(@project), class: 'button', method: :delete, data: {confirm: 'Are you sure you want to delete this project?'}  %>
+        <%= link_to 'Back to Projects', projects_path, class: 'button button-primary' %>
+      </div>
+    </div>
+  </section>
+</div>

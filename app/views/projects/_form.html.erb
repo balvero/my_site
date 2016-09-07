@@ -1,0 +1,23 @@
+<%= form_for @project do |f| %>
+    <% if @project.errors.any? %>
+        <h5><%= pluralize(@project.errors.count, "error") %> prevented this post from saving: </h5>
+        <ul class="error-list">
+          <% @project.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => 'u-full-width' %>
+
+    <%= f.label :description, 'Description' %>
+    <%= f.text_area :description, :class => 'u-full-width' %>
+
+    <%= f.label :link %>
+    <%= f.text_field :link, :class => 'u-full-width' %>
+
+    <br />
+    <%= f.submit 'Save', :class => 'button-primary' %>
+
+<% end %>
