@@ -3,13 +3,17 @@
     <% @posts.each do |post| %>
         <div class="post">
           <h2 class="title"><%= link_to "#{post.title}", post_path(post) %></h2>
-          <div class="meta"><strong>Posted:</strong> <%= post.created_at.strftime("%A, %b, %d") %> </div>
+          <div class="meta"><strong>Posted:</strong> <%= post.created_at.strftime("%A, %b, %d, %Y") %> </div>
           <div class="post-summary">
             <%= truncate(markdown(post.content), escape: false, length: 150 ) %>
           </div>
         </div>
 
     <% end %>
+
+    <div class="pagination center">
+      <%= will_paginate @posts %>
+    </div>
 
   </div>
 </div>

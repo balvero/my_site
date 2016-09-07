@@ -183,6 +183,45 @@ textarea {
   min-height: 300px;
 }
 
+
+// Pagination
+
+
+.current, .pagination a {
+  background-color: #f6f6f6;
+  padding: 0.5em 0.8em;
+  margin: 0 5px;
+  color: #000;
+  border-radius: 3px;
+}
+
+.pagination .current {
+  background-color: #33C3F0 !important;
+  color: #fff;
+}
+
+.previous_page, .next_page {
+  border: 1px solid #33C3F0!important;
+  padding: 0.4em 0.8em;
+  background-color: #33C3F0 !important;
+  color: #fff !important;
+  border-radius: 3px !important;
+
+}
+
+
+.disabled {
+  background-color: #f6f6f6!important;
+  border-color: #f6f6f6!important;
+  color: #ccc !important;
+}
+
+
+.previous_page:hover, .next_page:hover {
+  color: #fff;
+  opacity:0.8;
+}
+
 //Utils
 
 .center {
