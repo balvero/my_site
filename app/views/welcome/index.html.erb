@@ -1,26 +1,42 @@
-<div class="section">
+<div id="about" class="section">
   <div class="container">
     <div class="row">
      <div class="two-thirds center">
-       <h3 class="section-heading">About Me</h3>
+       <h3 class="section-heading">Web Developer</h3>
+       <p class="section-description">Responsive Web Design, Landing Page, Rails, Python, WordPress, Video Editing</p>
+       <h4>Education</h4>
+       <p>BA in Multimedia Studies - University of the Philippines Open University</p>
+       <p>Diploma in Software Development - AMA Computer Learning Center</p>
+       <a href="https://ph.linkedin.com/in/christian-bernard-alvero-b826b927" target="_blank" class="button">LinkedIn</a>
+       <a href="http://www.upwork.com/o/profiles/users/_~016ff5b37ed77bc45f/" target="_blank" class="button button-hire">Hire Me</a>
      </div>
     </div>
   </div>
 </div>
 
-<div class="section bg-grey center">
+<div id="works" class="section bg-grey center">
   <div class="container">
     <div class="row">
       <h3 class="section-heading">Works</h3>
-      <p class="section-description">Coming soon...</p>
+      <ul class="post-list">
+        <% @projects.each do |project| %>
+            <li><%= link_to "#{project.title}", project_path(project) %>
+              <div class="index-post-summary">
+                <%= truncate(markdown(project.description), escape: false, length: 80 ) %>
+              </div>
+              <div class="post-summary-spacer"></div>
+            </li>
 
-        <a class="button button-primary" href="#">View Portfolio</a>
+        <% end %>
+      </ul>
+
+        <%= link_to 'View All Portfolio', projects_path, class: 'button button-primary' %>
 
     </div>
   </div>
 </div>
 
-<div class="section center">
+<div id="recent-post" class="section center">
   <div class="container">
     <h3 class="section-heading">Recent Posts</h3>
     <ul class="post-list">

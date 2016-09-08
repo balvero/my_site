@@ -236,6 +236,36 @@ textarea {
   color: #fff !important;
 }
 
+
+// Home
+
+#about .section-description {
+  font-style: italic;
+  font-size: 17px;
+}
+
+#about h4 {
+  margin-top: 1em;
+}
+#about p {
+  margin-bottom: 0.5em;
+}
+
+.button-hire {
+  margin: 2em 0;
+  background-color: #e74c3c;
+  border-color: #e74c3c !important;
+  color: #fff !important;
+  font-weight: 100;
+}
+
+#works .post-list img, #recent-post .post-list img {
+  max-width: 150px;
+  height:auto;
+}
+
+
+
 //Utils
 
 .center {
