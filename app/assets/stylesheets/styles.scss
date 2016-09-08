@@ -183,6 +183,12 @@ textarea {
 }
 
 
+// flash message
+#flash-message {
+  margin: 1em 0;
+}
+
+
 // Pagination
 
 
@@ -247,6 +253,10 @@ textarea {
   margin-right: auto;
 }
 
+.section {
+  padding: 2rem 0 6rem;
+}
+
 /* Smaller than 550 */
 @media (max-width: 449px) {
   .section {
@@ -266,10 +276,6 @@ textarea {
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
-  .section {
-    padding: 5rem 0 6rem;
-  }
-
 
   .hero-heading {
     font-size: 2.4rem;

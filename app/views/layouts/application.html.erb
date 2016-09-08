@@ -39,6 +39,14 @@
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <%= render 'layouts/navigation' %>
+<div id="flash-message">
+  <div class="row">
+    <div class="center">
+      <div class="notice"><%= notice %></div>
+      <div class="alert"><%= alert %></div>
+    </div>
+  </div>
+</div>
 <div id="main">
   <%= yield %>
 </div>
