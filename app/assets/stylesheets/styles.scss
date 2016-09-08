@@ -67,15 +67,8 @@ a {
   border-bottom: 2px solid #e6e6e6;
 }
 
-
 .navbar-link.active {
   color: #33C3F0; }
-.has-docked-nav .navbar {
-  position: fixed;
-  top: 0;
-  left: 0; }
-.has-docked-nav .navbar-spacer {
-  display: block; }
 
 .section-heading {
   border-bottom: 3px solid #e6e6e6;
@@ -136,6 +129,13 @@ a {
     a {
       color: #333;
     }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
   }
 }
 
