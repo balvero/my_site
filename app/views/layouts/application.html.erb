@@ -5,8 +5,11 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Noobita</title>
-  <meta name="description" content="">
+  <title>
+    <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+    nOObita
+  </title>
+  <meta name="description" content="<%= if content_for?(:description) then yield(:description) + ' | ' end %>">
   <meta name="author" content="">
 
   <%= csrf_meta_tags %>
