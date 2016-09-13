@@ -35,6 +35,8 @@ gem 'will_paginate', '~> 3.1'
 
 gem 'devise', '~> 4.2'
 
+gem 'mail_form'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

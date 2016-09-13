@@ -1,0 +1,19 @@
+<% title 'Say Hello!' %>
+<div class="container">
+  <div class="row">
+    <div class="post-entry">
+      <h4 class="title center">Say Hello!</h4>
+      <div class="post-spacer"></div>
+
+      <%= form_for @contact do |f| %>
+        <%= f.text_field :name, class: 'u-full-width', :placeholder => 'Name', required: true  %>
+        <%= f.email_field :email, class: 'u-full-width', :placeholder => 'Email', required: true  %>
+        <%= f.text_area :message, class: 'u-full-width', :placeholder => 'Message', required: true  %>
+        <div class="hidden">
+          <%= f.text_field :nickname, hint: 'Leave this field blank'  %>
+        </div>
+          <%= f.submit 'Send Message', class: 'button button-primary' %>
+    <% end %>
+    </div>
+  </div>
+</div>
