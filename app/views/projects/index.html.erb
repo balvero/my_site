@@ -6,12 +6,10 @@
            <a href="<%= project_path(project) %>"><img src="<%= project.image_url %>" alt="<%= project.title %>" class="thumbnail"/></a>
           </div>
           <h2 class="title"><%= link_to "#{project.title}", project_path(project) %></h2>
-          <%= truncate(markdown(project.description), escape: false, length: 120 ) %>
+          <%= truncate(project.description, escape: true, length: 120 ) %>
         </div>
     <% end %>
-
     <div class="pagination center">
       <%= will_paginate @posts %>
     </div>
-
 </div>
