@@ -1,15 +1,13 @@
 <% title 'All Projects' %>
 <div id="project-index" class="container">
-  <div class=" section row">
     <% @projects.each do |project| %>
-        <div class="project one-third column">
-          <h2 class="title"><%= link_to "#{project.title}", project_path(project) %></h2>
+        <div class="project one column">
           <div class="project-image">
-            <img src="<%= project.image_url %>" alt="<%= project.title %>" class="thumbnail"/>
+           <a href="<%= project_path(project) %>"><img src="<%= project.image_url %>" alt="<%= project.title %>" class="thumbnail"/></a>
           </div>
-          <div class="post-summary">
-            <%= truncate(markdown(project.description), escape: false, length: 150 ) %>
-          </div>
+          <h2 class="title"><%= link_to "#{project.title}", project_path(project) %></h2>
+          <%= truncate(markdown(project.description), escape: false, length: 120 ) %>
+
         </div>
 
     <% end %>
@@ -18,5 +16,4 @@
       <%= will_paginate @posts %>
     </div>
 
-  </div>
 </div>
