@@ -1,9 +1,12 @@
 <% title 'All Projects' %>
-<div id="post-index" class="container">
-  <div class="post-entry section">
+<div id="project-index" class="container">
+  <div class=" section row">
     <% @projects.each do |project| %>
-        <div class="post">
+        <div class="project one-third column">
           <h2 class="title"><%= link_to "#{project.title}", project_path(project) %></h2>
+          <div class="project-image">
+            <img src="<%= project.image_url %>" alt="<%= project.title %>" class="thumbnail"/>
+          </div>
           <div class="post-summary">
             <%= truncate(markdown(project.description), escape: false, length: 150 ) %>
           </div>

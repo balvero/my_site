@@ -4,7 +4,10 @@
     <div class="post-entry">
       <h2 class="title center"><%= @project.title %></h2>
       <div class="post-spacer"></div>
-      <div class="post-content">
+      <div class="project-image">
+        <img src="<%= @project.image_url %>" alt="<%= @project.title %>"/>
+      </div>
+      <div class="project-description">
         <%= markdown @project.description %>
       </div>
       <div class="center">
