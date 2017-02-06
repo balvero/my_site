@@ -37,6 +37,7 @@ gem 'devise', '~> 4.2'
 
 gem 'mail_form'
 
+gem 'tinymce-rails', '~> 4.5', '>= 4.5.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

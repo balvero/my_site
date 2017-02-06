@@ -12,7 +12,8 @@
     <%= f.text_field :title, :class => 'u-full-width' %>
 
     <%= f.label :content, 'Body' %>
-    <%= f.text_area :content, :class => 'u-full-width' %>
+    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+    <%= tinymce %>
 
     <br />
     <%= f.submit 'Save', :class => 'button-primary' %>

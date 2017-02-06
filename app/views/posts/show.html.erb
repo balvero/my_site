@@ -7,7 +7,7 @@
       <div class="meta center">Posted: <%= @post.created_at.strftime("%A, %b, %d") %> </div>
       <div class="post-spacer"></div>
       <div class="post-content">
-        <%= markdown @post.content %>
+        <%= raw @post.content %>
       </div>
       <div class="body-nav">
         <%  if user_signed_in? %>
