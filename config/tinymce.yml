@@ -1,6 +1,8 @@
+menubar: false
 toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
+  - undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | codesample
+  -
 plugins:
   - image
   - link
+  - codesample

@@ -1,14 +1,20 @@
 <% title 'All Posts' %>
 <div id="post-index" class="container">
   <div class="post-entry section">
-    <% @posts.each do |post| %>
-        <div class="post">
-          <h2 class="title"><%= link_to "#{post.title}", post_path(post) %></h2>
-          <div class="meta"><strong>Posted:</strong> <%= post.created_at.strftime("%A, %b, %d, %Y") %> </div>
-          <div class="post-summary">
-            <%= truncate(markdown(post.content), escape: false, length: 150 ) %>
+
+    <% if !@post %>
+    <h2>No entries yet... Check back soon.</h2>
+    <% else %>
+      <% @posts.each do |post| %>
+          <div class="post">
+            <h2 class="title"><%= link_to "#{post.title}", post_path(post) %></h2>
+            <div class="meta"><strong>Posted:</strong> <%= post.created_at.strftime("%A, %b, %d, %Y") %> </div>
+            <div class="post-summary">
+              <%= truncate(markdown(post.content), escape: false, length: 150 ) %>
+            </div>
           </div>
-        </div>
+
+      <% end %>
 
     <% end %>
 
