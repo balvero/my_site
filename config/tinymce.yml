@@ -1,8 +1,9 @@
 menubar: false
 toolbar:
   - undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | codesample
-  -
+
 plugins:
   - image
   - link
   - codesample
+  - lists
